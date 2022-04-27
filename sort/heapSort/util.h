@@ -1,0 +1,1 @@
+int convertToInt(char *,int *);

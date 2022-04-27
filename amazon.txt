@@ -1,0 +1,32 @@
+  sort(foregroundAppList.begin(),foregroundAppList.end(),comparator);
+    sort(backgroundAppList.begin(),backgroundAppList.end(),comparator);
+    int s1 =foregroundAppList.size();
+    int s2=backgroundAppList.size();
+    vector<vector<int> > out;
+    vector<vector<int> > temp;
+    int curr_s=0;
+    int s;
+    for(int i=0; i<s1; i++){
+        cout<<"curr_s"<<curr_s<<endl;
+        for(int j=0; j<s2; j++){
+            s = foregroundAppList[i][1]+backgroundAppList[j][1];
+            if(s > deviceCapacity){
+                continue;
+            }
+            if(s==curr_s){
+                vector<int> t;
+                t.push_back(foregroundAppList[i][0]);
+                t.push_back(backgroundAppList[j][0]);
+                temp.push_back(t);    
+            }
+            if(s > curr_s){
+                temp.clear();
+                vector<int> t;
+                t.push_back(foregroundAppList[i][0]);
+                t.push_back(backgroundAppList[j][0]);
+                temp.push_back(t);
+                curr_s = s;
+            }
+        }
+    }
+    return temp;
