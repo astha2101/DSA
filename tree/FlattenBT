@@ -1,0 +1,49 @@
+void _flatten(TreeNode *A)
+{
+    if(A==NULL || A->left==NULL && A->right==NULL) return;
+    if(A->left!=NULL)
+    {
+        _flatten(A->left);
+        TreeNode *temp = A->right;
+        A->right = A->left;
+        A->left = NULL;
+        TreeNode * t = A->right;
+        while(t->right!=NULL)
+        {
+            t=t->right;
+        }
+        t->right=temp;
+
+    }
+    _flatten(A->right);
+
+}
+TreeNode* Solution::flatten(TreeNode* A) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    _flatten(A);
+    return A;
+}
+Time taken: 32 min.
+Score:
+414
+/
+500
+C++17 (Gcc-9.2)
+Old view
+2345678910111213141516
+/**
+ * Definition for binary tree
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+TreeNode* Solution::flatten(TreeNode* A) {
+
+All Problems
+171/441
