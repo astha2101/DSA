@@ -1,1 +1,10 @@
+Problem : Merge two sorted arrays without using extra space.
+
+Approach 1: let the arr1 size be n (small array )and arr2 size be m.
+iterate over arr1 till i<= k (k == n-1)  
+if arr1[i] < arr2[j], then i++
+else swap arr1[j] and arr1[k], k-- , j++
+
+Time complexity : O(n+m)
+Space complexity : O(1)
 
