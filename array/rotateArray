@@ -1,1 +1,5 @@
+Appraoch : To roatate an array of length n left or right by d elements, divide the array into d and n-d elements.
+Reverse both the arrays and then reverse the whole array.
+Time complexity: O(n)
+Space complexity : O(1)
 
