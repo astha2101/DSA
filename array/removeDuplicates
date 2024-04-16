@@ -1,0 +1,7 @@
+Problem : Remove duplicates from an array
+
+Approach : Store the array elements in the set , which will comtain the unique elements.
+Search the element in the set if present add into result array and remove from set.
+
+Time Complexity : O(n)
+Space complexity: O(n)
