@@ -5,6 +5,8 @@ iterate over arr1 till i<= k (k == n-1)
 if arr1[i] < arr2[j], then i++
 else swap arr1[j] and arr1[k], k-- , j++
 
-Time complexity : O(n+m)
+sort both the arrays
+
+Time complexity : O(nlogn)
 Space complexity : O(1)
 
