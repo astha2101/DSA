@@ -1,0 +1,11 @@
+Problem : Find the maximum continuous subarray sum
+Approach : take two varaibles, maxSumSoFar and maxSumCurrent
+initialise maxSumSoFar = INT_MIN and maxSumCurrent = 0
+iterate over the array
+maxSumCurrent += arr[i]
+if maxSumSoFar < maxSumCurrent then maxSumSoFar = maxSumCurrent
+if maxSumCurrent < 0 then maxSumCurrent = 0
+return maxSumSoFar
+
+Time Complexity : - O(n)
+Space complexity :- O(1)
