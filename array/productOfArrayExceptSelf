@@ -1,0 +1,8 @@
+Problem : Given an array arr[] of n integers, construct a Product Array prod[] (of the same size) such that prod[i] is equal to the product of all the elements of arr[] except arr[i]. 
+
+Approach 1: Find the product of all the elements in the array, then iterate over the array, and store the value of product after dividing the product from arr[i];
+
+Time complexity : O(n)
+Space complexity : O(1)
+
+Appraoch 2: Constraint is that we cannot use division operation
