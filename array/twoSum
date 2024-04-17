@@ -1,0 +1,7 @@
+Problem : In an array , find the two elements such that there sum is equal to the given number.
+
+Approach : Add the elements in the unordered_map 
+then iterate over the array and look for target - arr[i] if present, return the pair.
+
+Time complexity : O(n)
+Space complexity : O(n)
